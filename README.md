@@ -1,0 +1,2 @@
+# binario
+teste binario
