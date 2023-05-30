@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAX_NUMS 3 // número máximo de números decimais que podem ser lidos do arquivo
-#define TAMANHO 32 // número máximo de bits para representar um número em binário
+#define MAX_NUMS 3 // nï¿½mero mï¿½ximo de nï¿½meros decimais que podem ser lidos do arquivo
+#define TAMANHO 32 // nï¿½mero mï¿½ximo de bits para representar um nï¿½mero em binï¿½rio
 
 typedef struct {
     int topo;
@@ -16,7 +16,7 @@ void iniciaPilha(pilhaEstatica *p){
 void empilha(pilhaEstatica *p, int x) {
     int aux = 0;
 
-    // converte o número decimal em binário e armazena na pilha
+    // converte o nï¿½mero decimal em binï¿½rio e armazena na pilha
     while (x > 0) {
         p->vetor[aux] = x % 2;
         x /= 2;
@@ -27,7 +27,7 @@ void empilha(pilhaEstatica *p, int x) {
 }
 
 void imprimi(pilhaEstatica *p, FILE *saida) {
-    // escreve o número binário na ordem correta no arquivo de saída
+    // escreve o nï¿½mero binï¿½rio na ordem correta no arquivo de saï¿½da
     int i = 0;
     for (i = p->topo; i >= 0; i--) {
         fprintf(saida, "%d", p->vetor[i]);
@@ -56,7 +56,7 @@ int main(int argc, const char * argv[]) {
 
   // checar erros de abertura de arquivo
   if(entrada == NULL || saida == NULL) {
-     printf("Erro: algum dos arquivos não pode ser criado corretamente\n");
+     printf("Erro: algum dos arquivos nï¿½o pode ser criado corretamente\n");
      return 0;
   }
   
